@@ -33,8 +33,12 @@ function runEnter() {
     var dateValue = dateInput.property("value");
 
     // Filter the data based on input
-    var filteredDateData = tableData.filter(tableData => tableData.datetime === dateValue);    
+    var filteredDateData = tableData.filter(tableData => tableData.datetime === dateValue);
+    // var filteredCityData = tableData.filter(tableData => tableData.city === cityValue);
     
+    
+    console.log(filteredDateData);
+
     // Use D3 to select the rows in the table and delete them
     var tbody = d3.select("tbody");
     var tr = d3.selectAll("tr");
@@ -55,3 +59,14 @@ function runEnter() {
     
 };
 
+
+
+  // var cityInput = d3.select("#city");
+    // var stateInput = d3.select("#state");
+    // var countryInput = d3.select("#country");
+    // var shapeInput = d3.select("#shape");
+
+        // var cityValue = cityInput.property("value");
+    // var stateValue = stateInput.property("value");
+    // var countryValue = countryInput.property("value");
+    // var shapeValue = shapeInput.property("value");
