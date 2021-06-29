@@ -16,11 +16,12 @@ data.forEach(sighting => {
 var button = d3.select("#filter-btn");
     
 // Select the filter form
-var form = d3.select("#filters");
+var form = d3.select("#form");
 
 // Create event handlers for clicking the button or pressing the enter key
 button.on("click", runEnter);
 form.on("submit", runEnter);
+
 
 function runEnter() {
     
@@ -36,7 +37,6 @@ function runEnter() {
     var filteredDateData = tableData.filter(tableData => tableData.datetime === dateValue);    
     
     // Use D3 to select the rows in the table and delete them
-    var tbody = d3.select("tbody");
     var tr = d3.selectAll("tr");
     tr.remove();
     
