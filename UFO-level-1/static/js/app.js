@@ -4,7 +4,7 @@ var tableData = data;
 var tbody = d3.select("tbody");
 
 // Loop through and append each object to rows in table
-data.forEach(sighting => {
+tableData.forEach(sighting => {
     var row = tbody.append("tr");
     Object.entries(sighting).forEach(([key, value]) => {
     var cell = row.append("td");
