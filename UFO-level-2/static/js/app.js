@@ -62,8 +62,8 @@ function runEnter() {
    });
    
    // Use D3 to select the rows in the table and delete them
-   var tr = d3.selectAll("tr");
-   tr.remove();
+    var tb = d3.select("tbody");
+    tb.html("");
    
    // select the table again
    var tbody = d3.select("tbody");
